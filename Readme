@@ -1,0 +1,32 @@
+# 🎬 MOVIERSE
+
+<p align="center">
+  <img src="" alt="MOVIERSE" width="800">
+</p>
+
+## 🎬 About
+
+MOVIERSE is a desktop-based movie discovery and recommendation application developed with **Python and PyQt6**. It allows users to discover movies and get similar movie recommendations using a content-based recommendation system.
+
+## ✨ Features
+
+* 🎬 Movie discovery and listing
+* 🔎 Search and category filtering
+* 🎲 Random movie selection
+* 🤖 Content-based movie recommendations
+* ⭐ IMDb rating information
+* 🎭 Genre and actor analysis
+* 🖼️ Movie posters via OMDb API
+
+## 🛠️ Technologies
+
+**Python · PyQt6 · PostgreSQL · Scikit-learn · Pandas · NumPy · OMDb API · Joblib**
+
+## 🤖 Recommendation System
+
+MOVIERSE uses **TF-IDF, MultiLabelBinarizer and Cosine Similarity** to analyze movie information and recommend similar movies.
+
+## 👨‍💻 Developer
+
+**İsmet Mercanlı**
+Computer Engineering Student
