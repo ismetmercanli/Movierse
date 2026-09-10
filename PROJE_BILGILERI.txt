@@ -1,0 +1,151 @@
+================================================================================
+                    MOVIERSE - PROJE BILGILERI
+================================================================================
+
+OLUSTURMA TARIHI: 2024
+PROJE ADI: MOVIERSE - AI Movie Discovery Platform
+VERITABANI: PostgreSQL
+
+================================================================================
+1. VERITABANI BAGLANTI BILGILERI
+================================================================================
+
+Host: localhost
+Port: 5432
+Database: movies_db
+User: postgres
+Password: 1234
+
+NOT: Sifre main.py dosyasinda 29. satirda tanimli.
+     Environment variable kullanmak icin: set DB_PASSWORD=sifre
+
+================================================================================
+2. VERITABANI TABLO YAPISI
+================================================================================
+
+Tablo Adi: movies
+
+Sutunlar:
+- id          : SERIAL PRIMARY KEY (Otomatik artan)
+- title       : VARCHAR(255) NOT NULL (Film basligi)
+- genre       : VARCHAR(100) (Film turu)
+- year        : INTEGER (Yapim yili)
+- rating      : REAL (Puan - 0-10 arasi)
+- description : TEXT (Film aciklamasi)
+- poster_url  : TEXT (Afiş URL'si)
+
+================================================================================
+3. KULLANILAN TEKNOLOJILER
+================================================================================
+
+Python Versiyonu: 3.x
+GUI Framework: PyQt6
+Veritabani: PostgreSQL (psycopg2-binary)
+HTTP Istekleri: requests
+Goruntu Islemleri: PyQt6.QtGui (QPixmap)
+Film Veri API: OMDb API (http://www.omdbapi.com/)
+
+Paketler:
+- PyQt6>=6.0.0
+- requests>=2.28.0
+- psycopg2-binary>=2.9.0
+
+API Key:
+- OMDb API Key gerekli (https://www.omdbapi.com/apikey.aspx)
+- Ucretsiz: Gunluk 1000 istek limiti
+- API key main.py'de veya environment variable olarak ayarlanabilir
+
+================================================================================
+4. PROJE DOSYA YAPISI
+================================================================================
+
+main.py                  : Ana uygulama dosyasi
+calistir.bat            : Uygulamayi calistirmak icin batch dosyasi
+requirements.txt        : Python paket listesi
+baglanti_test_simple.py : Veritabani baglanti test scripti
+
+================================================================================
+5. KURULUM VE CALISTIRMA
+================================================================================
+
+KURULUM:
+1. PostgreSQL kurulumu (pgAdmin 4 ile)
+2. movies_db veritabani olusturma
+3. movies tablosu olusturma (otomatik veya manuel)
+4. Python paketlerini yukleme: pip install -r requirements.txt
+
+CALISTIRMA:
+- calistir.bat dosyasini calistirin
+- VEYA: python main.py
+
+================================================================================
+6. VERITABANI YONETIMI
+================================================================================
+
+pgAdmin 4 Kullanimi:
+- Veritabani olusturma: Databases > Create > Database (movies_db)
+- Tablo olusturma: Otomatik (uygulama ilk calistiginda)
+- Veri ekleme: pgAdmin 4 > movies tablosu > View/Edit Data
+- SQL sorgulari: Query Tool (Alt+Shift+Q)
+
+================================================================================
+7. ONEMLI NOTLAR
+================================================================================
+
+- Veritabani sifresi main.py dosyasinda hardcoded (1234)
+- Environment variable kullanmak daha guvenli olabilir
+- Ilk calistirmada tablo otomatik olusturulur
+- Veritabani bos oldugunda uygulama bos liste gosterir
+- Poster URL'leri internet uzerinden yuklenir (OMDb API)
+- OMDb API Key gerekli (ust sagdaki arama butonu ile eklenebilir)
+- OMDb API Key: main.py'de veya environment variable (OMDB_API_KEY)
+- Film ekleme: Ust sagdaki arama butonu (🔍) ile OMDb'den film eklenebilir
+
+================================================================================
+8. SORUN GIDERME
+================================================================================
+
+Baglanti Hatasi:
+- PostgreSQL servisinin calistigindan emin olun
+- Sifrenin dogru oldugundan emin olun
+- movies_db veritabaninin olusturuldugundan emin olun
+- baglanti_test_simple.py ile test edin
+
+Uygulama Calismiyor:
+- Python ve paketlerin yuklu oldugundan emin olun
+- calistir.bat ile calistirin (otomatik kontrol yapar)
+- Hata mesajlarini kontrol edin
+
+================================================================================
+9. OZELLIKLER
+================================================================================
+
+- OMDb API entegrasyonu (Film arama ve ekleme)
+- PostgreSQL veritabani yonetimi
+- Film listeleme ve kategorilere gore filtreleme
+- Film posterleri ve detaylari
+- Kategori bazli film gosterme
+- Rastgele film secimi
+
+GELECEKTEKI GELISTIRMELER:
+- Environment variable ile sifre yonetimi
+- Veri silme/guncelleme arayuzu
+- Toplu film ekleme
+- Kullanici profili ve favoriler
+- Film onerme algoritmasi (AI)
+- Film detay sayfasi
+
+================================================================================
+10. ILETISIM VE DESTEK
+================================================================================
+
+Sorun durumunda:
+1. baglanti_test_simple.py ile baglantiyi test edin
+2. pgAdmin 4'te veritabani durumunu kontrol edin
+3. PostgreSQL servis durumunu kontrol edin
+4. Hata mesajlarini inceleyin
+
+================================================================================
+SON GUNCELLEME: 2024
+================================================================================
+
